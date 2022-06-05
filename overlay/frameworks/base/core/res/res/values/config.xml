@@ -756,14 +756,9 @@
 
      <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
      <integer-array name="config_udfps_sensor_props" translatable="false" >
-      <!--
-        <item>sensorLocationX</item>
-        <item>sensorLocationY</item>
-        <item>sensorRadius</item>
-      -->
-        <item>542</item>
-        <item>1910</item>
-        <item>95</item>
+        <item>717</item>  <!-- <item>sensorLocationX</item> -->
+        <item>2542</item> <!-- <item>sensorLocationY</item> -->
+        <item>110</item>  <!-- <item>sensorRadius</item> -->
      </integer-array>
 
      <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->

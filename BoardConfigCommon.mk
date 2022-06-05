@@ -76,7 +76,7 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := OnePlus8T,OnePlus9R,lemonades,kebab,lemonkebab
+TARGET_OTA_ASSERT_DEVICE := OnePlus8Pro,instantnoodlep
 
 # A/B
 AB_OTA_UPDATER := true

@@ -257,6 +257,7 @@ ro.soc.model=SM8250
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
+vendor.usb.product_string=OnePlus 8 Pro
 
 # WiFi
 wifi.aware.interface=wifi-aware0
