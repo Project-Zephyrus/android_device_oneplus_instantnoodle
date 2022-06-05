@@ -41,9 +41,7 @@ typedef struct {
 } device_t;
 
 static const device_t devices[] = {
-    {"19805", "OnePlus 8T"},
-    {"20809", "OnePlus 8T"},
-    {"20828", "OnePlus 9R"},
+    {"20828", "OnePlus 8"},
 };
 
 static inline const char *BtmGetDefaultName()
