@@ -52,18 +52,5 @@ void property_override(char const prop[], char const value[]) {
 
 void vendor_load_properties() {
   int project_name = stoi(android::base::GetProperty("ro.boot.project_name", ""));
-  switch(project_name){
-    case 19805:
-      /* OnePlus 8T */
-          property_override("ro.product.model", "OnePlus 8T");
-      break;
-    case 20809:
-      /* OnePlus 8T T-Mobile */
-          property_override("ro.product.model", "OnePlus 8T");
-      break;
-    case 20828:
-      /* OnePlus 9R */
-          property_override("ro.product.model", "OnePlus 9R");
-      break;
-  }
+  property_override("ro.product.model", "OnePlus 8");
 }
