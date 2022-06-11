@@ -26,7 +26,7 @@ BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 BOARD_VENDOR := oneplus
 
-COMMON_PATH := device/oneplus/sm8250-common
+COMMON_PATH := device/oneplus/instantnoodle
 
 # Architecture
 TARGET_ARCH := arm64
@@ -47,6 +47,9 @@ endif
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_NO_BOOTLOADER := true
+
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
@@ -226,4 +229,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/oneplus/sm8250-common/BoardConfigVendor.mk
+-include vendor/oneplus/instantnoodle/BoardConfigVendor.mk

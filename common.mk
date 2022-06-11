@@ -22,8 +22,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
+# Inherit from vendor blobs
+$(call inherit-product, vendor/oneplus/instantnoodle/instantnoodle-vendor.mk)
 
 # Inherit packages from vendor/oneplus/addons/camera
 $(call inherit-product, vendor/oneplus/addons/camera/camera-vendor.mk)
@@ -452,6 +452,14 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
     libsensorndkbridge
 
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/row/kona_bmi26x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_bmi26x_row.json \
+    $(LOCAL_PATH)/configs/sensors/row/kona_mmc5603x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_mmc5603x_0_row.json \
+    $(LOCAL_PATH)/configs/sensors/vzw/kona_T0_bmi26x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_T0_bmi26x_0_vzw.json \
+    $(LOCAL_PATH)/configs/sensors/vzw/kona_bmi26x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_bmi26x_0_vzw.json \
+    $(LOCAL_PATH)/configs/sensors/vzw/kona_mmc5603x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kona_mmc5603x_0_vzw.json
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -604,3 +612,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
+
+# Wifi Overlay
+PRODUCT_PACKAGES += \
+    OnePlus8WifiOverlay
